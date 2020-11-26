@@ -5,7 +5,6 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 
-nltk.download('stopwords')
 stopwords = stopwords.words('indonesian')
 
 factory = StemmerFactory()
