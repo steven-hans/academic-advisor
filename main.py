@@ -60,7 +60,8 @@ def analysis():
     temp_rule_result: List[RuleResult] = []
 
     prompts = request.form['questions'].lower().strip().split('\n')[:5]
-    if len(prompts) == 0:
+
+    if prompts[0] == '':
         temp_rule_result: Union[
             List[RuleResult], RuleResult] = checker.check_all_rules()
     else:

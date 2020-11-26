@@ -10,11 +10,7 @@ stopwords = stopwords.words('indonesian')
 factory = StemmerFactory()
 stemmer = factory.create_stemmer()
 
-nlp: Language = spacy.blank('id')
-pipe = nlp.create_pipe('textcat')
-nlp.add_pipe(pipe)
-
-nlp.from_disk('classifier')
+nlp: Language = spacy.load('classifier')
 
 tc: TextCategorizer = nlp.get_pipe('textcat')
 
