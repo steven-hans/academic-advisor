@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% with messages = get_flashed_messages() %}
+                    {% for message in messages %}
+                        <div class="column col-6">{{ message }}</div>
+                    {% endfor %}
+                {% endwith %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Sistem pakar penasihat akademik</h1>
+                <p>Upload file pdf transkrip SIAKAD untuk memulai analisis.</p>
+            </div>
+        </div>
+
+        <form class="form-input" action="/analysis" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Unggah pdf dan daftar pertanyaan</legend>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="file" name="transcript_file">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <textarea name="questions" rows="5" cols="27" placeholder="Daftar pertanyaan (pisahkan setiap baris)"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="submit" value="Upload transkrip SIAKAD">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        {% for r in R %}
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <div class="card warning fluid">
+                    <h3>{{ r }}</h3>
+                    <div class="collapse">
+                        {% for v in R[r] %}
+                            <input type="checkbox" id="collapse-section{{v[2]}}" aria-hidden="true">
+                            <label for="collapse-section{{v[2]}}" aria-hidden="true">{{ v[0] }}</label>
+                            <div>
+                                <p>{{ v[1] }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

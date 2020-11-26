@@ -1,0 +1,17 @@
+{
+  "exclusive_classes":true,
+  "architecture":"bow",
+  "labels":[
+    "rule_special_course",
+    "rule_potensi_predikat_kelulusan",
+    "rule_batas_waktu_studi",
+    "rule_pertemuan_tiap_semester",
+    "rule_ujian_skripsi",
+    "rule_hadir_kuliah",
+    "rule_evaluasi",
+    "rule_penyelesaian_studi",
+    "rule_skripsi"
+  ],
+  "pretrained_vectors":null,
+  "pretrained_dims":null
+}

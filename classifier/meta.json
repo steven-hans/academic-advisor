@@ -1,0 +1,37 @@
+{
+  "lang":"id",
+  "name":"model",
+  "version":"0.0.0",
+  "spacy_version":">=2.3.3",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"08fc87611",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":"spacy_pretrained_vectors"
+  },
+  "pipeline":[
+    "textcat"
+  ],
+  "factories":{
+    "textcat":"textcat"
+  },
+  "labels":{
+    "textcat":[
+      "rule_special_course",
+      "rule_potensi_predikat_kelulusan",
+      "rule_batas_waktu_studi",
+      "rule_pertemuan_tiap_semester",
+      "rule_ujian_skripsi",
+      "rule_hadir_kuliah",
+      "rule_evaluasi",
+      "rule_penyelesaian_studi",
+      "rule_skripsi"
+    ]
+  }
+}
